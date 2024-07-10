@@ -2,44 +2,14 @@ let navSearchDropdwn = document.querySelector(".nav-search-dropdwn")
 let navSearchIcon = document.querySelector(".nav-search-icon")
 let navSearchInput = document.querySelector(".nav-search-input")
 navSearchDropdwn.addEventListener('click', () => {
-    navSearchDropdwn.classList.add("active")
+    navSearchDropdwn.classList.toggle("active")
 })
 navSearchIcon.addEventListener('click', () => {
-    navSearchIcon.classList.add("active")
+    navSearchIcon.classList.toggle("active")
 })
 navSearchInput.addEventListener('click', () => {
-    document.querySelector(".nav-search").classList.add("active")
+    document.querySelector(".nav-search").classList.toggle("active")
 })
-
-let bgSlide = document.querySelectorAll(".bg-slide ul img")
-let prevBtn = document.querySelector(".prev_slide")
-let nextBtn = document.querySelector(".next_slide")
-let bgSlideCurrentPos = 0
-function changeSlide(){
-    for (let i = 0; i < bgSlide.length; i++) {
-        bgSlide[i].style.display = 'none'
-    }
-    bgSlide[bgSlideCurrentPos].style.display = 'block'
-}
-prevBtn.addEventListener('click', () => {
-    if (bgSlideCurrentPos == 0) {
-        bgSlideCurrentPos = bgSlide.length - 1
-    }else{
-        bgSlideCurrentPos -= 1
-    }
-    changeSlide()
-})
-nextBtn.addEventListener('click', nextImage)
-function nextImage(){
-    if (bgSlideCurrentPos < bgSlide.length -1) {
-        bgSlideCurrentPos += 1
-    }
-    else {
-        bgSlideCurrentPos = 0
-    }
-    changeSlide()
-}
-setInterval(nextImage, 5000)
 
 let slide1 = document.querySelector('.slide1')
 let backbtn1 = document.getElementById("prev1") 
