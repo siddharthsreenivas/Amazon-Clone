@@ -1,3 +1,3 @@
 # Amazon Clone
 
-live demo - amasonclone.netlify.app
+live demo - [https://amasonclone.netlify.app/](https://amasonclone.netlify.app/)
